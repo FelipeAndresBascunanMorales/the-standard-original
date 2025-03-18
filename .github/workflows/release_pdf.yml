@@ -104,13 +104,13 @@ jobs:
             
             # Convert markdown to HTML using Python's markdown module
             python3 -c "
-import markdown
-import sys
-with open('$file', 'r', encoding='utf-8') as f:
-    content = f.read()
-html = markdown.markdown(content, extensions=['tables', 'fenced_code', 'toc'])
-with open('$file.html', 'w', encoding='utf-8') as f:
-    f.write(html)
+            import markdown
+            import sys
+            with open('$file', 'r', encoding='utf-8') as f:
+                content = f.read()
+            html = markdown.markdown(content, extensions=['tables', 'fenced_code', 'toc'])
+            with open('$file.html', 'w', encoding='utf-8') as f:
+                f.write(html)
             "
             
             # Append to main HTML file
